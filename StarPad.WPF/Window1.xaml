@@ -1,0 +1,25 @@
+﻿<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:StarPadSDK_Inq="clr-namespace:starPadSDK.Inq;assembly=Inq"
+    x:Class="MathRecoScaffold.Window1"
+    Title="Window1" WindowState="Maximized"    
+    xmlns:wpfHelp="clr-namespace:starPadSDK.WPFHelp;assembly=MathUI">
+	<DockPanel>
+		<Menu DockPanel.Dock="Top">
+            <MenuItem Header="File">
+                <MenuItem Header="Reparse" Click="reparseMenu_Click"/>
+                <MenuItem Header="New..." Click="newMenu_Click"/>
+                <MenuItem Header="Clear" Click="clearMenu_Click"/>
+                <MenuItem Header="Quit" Click="quitMenu_Click"/>
+            </MenuItem>
+        </Menu>
+        <ToolBarTray DockPanel.Dock="Right" Orientation="Vertical">
+            <ToolBar x:Name="alternatesMenu"/>
+		</ToolBarTray>
+        <Grid ClipToBounds="True" ScrollViewer.HorizontalScrollBarVisibility="Visible">
+            <wpfHelp:ContainerVisualHost HorizontalAlignment="Stretch" x:Name="underlay"/>
+            <StarPadSDK_Inq:InqCanvas x:Name="inqCanvas" Background="#00000000"/>
+        </Grid>
+	</DockPanel>
+</Window>
