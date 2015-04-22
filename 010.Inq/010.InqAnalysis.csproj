@@ -178,9 +178,6 @@
     <Reference Include="UIAutomationProvider">
       <RequiredTargetFramework>3.0</RequiredTargetFramework>
     </Reference>
-    <Reference Include="Unicode">
-      <HintPath>..\..\math-semantic-parsing-ui\Libs\Unicode.dll</HintPath>
-    </Reference>
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
@@ -213,6 +210,10 @@
     <ProjectReference Include="..\001.Utils\001.Utils.csproj">
       <Project>{C7F99B9C-DCDD-4D51-8EF1-A83264555D73}</Project>
       <Name>001.Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\040.Parsing\Unicode\Unicode.csproj">
+      <Project>{339136ba-87e4-444a-8847-4e1ea846288e}</Project>
+      <Name>Unicode</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
